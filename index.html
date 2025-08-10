@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="calculator" role="application" aria-label="Scientific calculator">
+    <input id="display" class="display" type="text" inputmode="none" aria-readonly="true" readonly />
+    <div class="button-grid">
+      <!-- Row 1 -->
+      <button class="btn small" data-action="clear">C</button>
+      <button class="btn small" data-action="backspace">⌫</button>
+      <button class="btn small" data-value="(">(</button>
+      <button class="btn small" data-value=")">)</button>
+
+      <!-- Row 2 (functions) -->
+      <button class="btn fn" data-value="sqrt(">√</button>
+      <button class="btn fn" data-value="^">xʸ</button>
+      <button class="btn fn" data-value="%">%</button>
+      <button class="btn op" data-value="/">÷</button>
+
+      <!-- Row 3 -->
+      <button class="btn fn" data-value="sin(">sin</button>
+      <button class="btn fn" data-value="cos(">cos</button>
+      <button class="btn fn" data-value="tan(">tan</button>
+      <button class="btn op" data-value="*">×</button>
+
+      <!-- Row 4 -->
+      <button class="btn" data-value="7">7</button>
+      <button class="btn" data-value="8">8</button>
+      <button class="btn" data-value="9">9</button>
+      <button class="btn op" data-value="-">−</button>
+
+      <!-- Row 5 -->
+      <button class="btn" data-value="4">4</button>
+      <button class="btn" data-value="5">5</button>
+      <button class="btn" data-value="6">6</button>
+      <button class="btn op" data-value="+">+</button>
+
+      <!-- Row 6 -->
+      <button class="btn" data-value="1">1</button>
+      <button class="btn" data-value="2">2</button>
+      <button class="btn" data-value="3">3</button>
+      <button class="btn equal tall" data-action="calculate">=</button>
+
+      <!-- Row 7 -->
+      <button class="btn zero" data-value="0">0</button>
+      <button class="btn" data-value=".">.</button>
+    </div>
+
+   
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

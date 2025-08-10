@@ -1,0 +1,98 @@
+:root{
+  --bg:#ffd100;
+  --panel:#33322d;
+  --btn:#468faf;
+  --accent:#10b981;
+  --muted:
+  --glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg,#fffbbd 0%, #fffbbd 100%);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  color:#ffffff;
+  padding:24px;
+}
+
+/* Calculator panel */
+.calculator{
+  width:360px;
+  background:linear-gradient(180deg,var(--panel), #07111a);
+  border-radius:12px;
+  padding:18px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.7), inset 0 1px 0 rgba(2,6,23,0.7);
+}
+
+/* Display */
+.display{
+  width:100%;
+  height:64px;
+  border-radius:8px;
+  border: none;
+  padding:12px 16px;
+  font-size:1.4rem;
+  text-align:right;
+  color:#e6f9f1;
+  background: linear-gradient(180deg, #bc4749 0%, #bc4749 100%);
+  margin-bottom:12px;
+  outline: none;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.4);
+}
+
+/* Grid */
+.button-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:10px;
+}
+
+.btn{
+  background:var(--btn);
+  border-radius:8px;
+  padding:14px 8px;
+  font-size:1rem;
+  color:var(--muted);
+  border:none;
+  cursor:pointer;
+  box-shadow: 0 3px 8px rgba(2,6,23,0.6);
+  transition: transform .06s ease, background .12s ease, color .12s;
+}
+
+.btn:active{ transform: translateY(1px) }
+
+.btn:hover{ color: #fff; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)) }
+
+.fn{ color:#ffd166 }
+.op{ color:#8ecae6 }
+.equal{
+  background: linear-gradient(180deg,var(--accent), #0ea27a);
+  color:#042011;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.05rem;
+}
+
+.tall{ grid-row: span 2; border-radius:8px; }
+
+.small{ padding:10px; font-size:0.95rem }
+.zero{ grid-column: span 2; }
+
+/* footer hint */
+.hint{
+  margin-top:10px;
+  font-size:0.8rem;
+  color: #9fb0c6;
+  text-align:center;
+}
+@media (max-width:420px){
+  .calculator{ width:100%; }
+  .display{ height:56px; font-size:1.2rem }
+}
